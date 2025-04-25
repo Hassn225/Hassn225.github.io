@@ -1,4 +1,3 @@
-TRAIN TICKET RESERVATION 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +6,16 @@ TRAIN TICKET RESERVATION
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: url('train-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
     .login-container {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       padding: 30px 40px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -70,18 +71,18 @@ TRAIN TICKET RESERVATION
   <h2>Login to Your Account</h2>
   <p>Enter your credentials to access your Pakistan Railways account</p>
   
-  <form>
+  <form action="login.php" method="POST">
     <label for="email">Email or CNIC</label>
-    <input type="text" id="email" placeholder="Your email or CNIC number">
+    <input type="text" id="email" name="email" placeholder="Your email or CNIC number" required>
     
     <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Your password">
+    <input type="password" id="password" name="password" placeholder="Your password" required>
     
     <button class="login-btn" type="submit">Login</button>
   </form>
 
   <div class="links">
-    <p>Don't have an account? <a href="#">Register Now</a></p>
+    <p>Don't have an account? <a href="register.html">Register Now</a></p>
     <a href="#">Forgot Password?</a>
   </div>
 </div>
