@@ -1,68 +1,102 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Pakistan Railways</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .login-container {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Pakistan Railways Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h2 {
+      color: #006400;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: #444;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .gender-group {
+      margin-top: 15px;
+    }
+    .gender-group label {
+      font-weight: normal;
+      margin-right: 10px;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #006400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .links a {
+      color: #006400;
+      text-decoration: none;
+      display: block;
+      margin-top: 5px;
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php" method="POST">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="register.html">Register here</a></p>
+
+<div class="login-container">
+  <h2>Login to Your Account</h2>
+  <p>Enter your credentials to access your Pakistan Railways account</p>
+  
+  <form>
+    <label for="email">Email or CNIC</label>
+    <input type="text" id="email" placeholder="Your email or CNIC number">
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Your password">
+    
+    <div class="gender-group">
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
     </div>
+
+    <button class="login-btn" type="submit">Login</button>
+  </form>
+
+  <div class="links">
+    <p>Don't have an account? <a href="#">Register Now</a></p>
+    <a href="#">Forgot Password?</a>
+  </div>
+</div>
+
 </body>
 </html>
