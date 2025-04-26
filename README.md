@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pakistan Railways Login</title>
+  <title>Pakistan Railways Registration</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,12 +12,12 @@
       align-items: center;
       height: 100vh;
     }
-    .login-container {
+    .register-container {
       background: #fff;
       padding: 30px 40px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 320px;
+      width: 350px;
     }
     h2 {
       color: #006400;
@@ -33,6 +33,7 @@
       margin-top: 15px;
     }
     input[type="text"],
+    input[type="email"],
     input[type="password"] {
       width: 100%;
       padding: 10px;
@@ -47,7 +48,7 @@
       font-weight: normal;
       margin-right: 10px;
     }
-    .login-btn {
+    .register-btn {
       width: 100%;
       padding: 10px;
       background-color: #006400;
@@ -72,29 +73,34 @@
 </head>
 <body>
 
-<div class="login-container">
-  <h2>Login to Your Account</h2>
-  <p>Enter your credentials to access your Pakistan Railways account</p>
+<div class="register-container">
+  <h2>Create a New Account</h2>
+  <p>Register to use Pakistan Railways services</p>
   
   <form>
-    <label for="email">Email or CNIC</label>
-    <input type="text" id="email" placeholder="Your email or CNIC number">
-    
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" placeholder="Your full name">
+
+    <label for="cnic">CNIC</label>
+    <input type="text" id="cnic" placeholder="12345-1234567-1">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your email address">
+
     <label for="password">Password</label>
-    <input type="password" id="password" placeholder="Your password">
-    
+    <input type="password" id="password" placeholder="Create a password">
+
     <div class="gender-group">
       <label>Gender:</label>
       <label><input type="radio" name="gender" value="male"> Male</label>
       <label><input type="radio" name="gender" value="female"> Female</label>
     </div>
 
-    <button class="login-btn" type="submit">Login</button>
+    <button class="register-btn" type="submit">Register</button>
   </form>
 
   <div class="links">
-    <p>Don't have an account? <a href="#">Register Now</a></p>
-    <a href="#">Forgot Password?</a>
+    <p>Already have an account? <a href="#">Login Here</a></p>
   </div>
 </div>
 
